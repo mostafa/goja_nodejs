@@ -150,7 +150,7 @@ func (r *Registry) getCompiledSource(p string) (*js.Program, error) {
 		if err != nil {
 			return nil, err
 		}
-		prg, err = js.CompileAST(parsed, false)
+		prg, err = js.CompileAST(parsed, false, false)
 		if err == nil {
 			if r.compiled == nil {
 				r.compiled = make(map[string]*js.Program)
